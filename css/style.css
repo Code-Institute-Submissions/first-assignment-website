@@ -146,8 +146,12 @@ body,html {
  opacity: 0.8;
 }
 
-.main-content-wrapper {
+.audio-room-main-content-wrapper {
     min-height: 100vh;
+}
+
+.audio-room-content-wrapper{
+ position: relative;
 }
 
 .audio-room-center-overlay {
@@ -184,7 +188,7 @@ body,html {
 /* text-align: center;*/
 /*}*/
 
-.our-greatest-hits{
+.ghostwhite_3rem{
  font-size: 3rem;
  color:ghostwhite;
 }
@@ -192,7 +196,6 @@ body,html {
 #audio-room-background-image-1{
    /*The Image Used:*/
    background-image: url("../assets/Images/album-black-classic-167092.jpg");
-   position:relative;
 }
 
 #audio-room-background-image-2{

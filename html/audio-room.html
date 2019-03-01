@@ -52,6 +52,12 @@ This will be the page whereby the public can play audio clips from the band
   <!-- Scrolling Plugin -->
   <script type ="text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
   
+  <!-- Circle Audio Player Plugin Javascript File-->
+  <script src="../assets/plugins/in-use/circle-audio-player/circle-audio-player-plugin-modified/circle-player.js"></script>
+  
+  <!-- Circle Audio Player Plugin Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/in-use/circle-audio-player/circle-audio-player-plugin-modified/circle-player.css"/>
+  
   <title>The Monkees</title>
 </head>
 
@@ -93,39 +99,55 @@ This will be the page whereby the public can play audio clips from the band
   </div>
  
   <main>
-    <div class="container main-content-wrapper">
+    <div class="container audio-room-main-content-wrapper">
       <div class="background-image-wrapper"></div>
-      <div class="content-wrapper">
+      <div class="audio-room-content-wrapper">
         <div class="audio-room-background-images" id="audio-room-background-image-1"></div>
         <div class="overlay"></div>
         <div class="audio-room-center-overlay col-12">
-          <h1 class="rum-raisin-text our-greatest-hits">Our Greatest Hits</h1>
+          <h1 class="rum-raisin-text ghostwhite_3rem">Our Greatest Hits</h1>
           <button type="button" class="btn btn-dark btn-lg" onclick="(window).scrollTo(document.getElementById('audio-room-start'), 696,800);">Discover More</button>
         </div>
       </div>  
       
-      <div class="content-wrapper" id="audio-room-start">  
+      <div class="audio-room-content-wrapper" id="audio-room-start">  
         <div class="audio-room-background-images" id="audio-room-background-image-2"></div>
-        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
-        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+        <div class="audio-room-center-overlay col-12">
+          <h1 class="rum-raisin-text ghostwhite_3rem">Clarksville</h1>
+          <span id="cp-1"></span>
+        </div>
+        <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
+        <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
       </div>
       
-      <div class="content-wrapper">  
+      <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-3"></div>
-        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
-        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+        <div class="audio-room-center-overlay col-12">
+          <h1 class="rum-raisin-text ghostwhite_3rem">Day Dream Believer</h1>
+          <span id="cp-2"></span>
+        </div>
+        <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
+        <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
       </div>
        
-      <div class="content-wrapper">  
+      <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-4"></div>
-        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
-        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+        <div class="audio-room-center-overlay col-12">
+          <h1 class="rum-raisin-text ghostwhite_3rem">Im A Believer</h1>
+          <span id="cp-3"></span>
+        </div>
+        <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
+        <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
       </div>
       
-      <div class="content-wrapper">  
+      <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-5"></div>
-        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
-        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+        <div class="audio-room-center-overlay col-12">
+          <h1 class="rum-raisin-text ghostwhite_3rem">Stepping Stone</h1>
+          <span id="cp-4"></span>
+        </div>
+        <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
+        <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
       </div>  
         
     </div>
@@ -137,6 +159,7 @@ I cant get this stupid thing to work so the options now are:
   3. Use icons and javascript to open a hidden audio file
 -->
 
+<!-- Start of Scroll Function Script -->
 <!-- 
 This script section is basically defining the function to scroll to the first audio track just 
 in case the direction function above does not call this can be used as a secondary function. 
@@ -147,6 +170,30 @@ in case the direction function above does not call this can be used as a seconda
       console.log("it works");
     }
 </script>
+<!-- End of Scroll Function Script -->
+
+<!-- Start of the Audio Player Script -->
+<script>
+  // Setting up all the songs as variable
+    var Clarksville_mp3 = "../assets/Band-audio/Clarksville.mp3";
+    var DayDreamBeliever_mp3 = "../assets/Band-audio/DaydreamBeliever.mp3";
+    var ImABeliever_mp3 = "../assets/Band-audio/ImABeliever.mp3";
+    var SteppingStone_mp3 = "../assets/Band-audio/SteppingStone.mp3";
+    
+  //Defining all of the playback functions
+  //Target: Which player controls the playback, enter a div ID.
+  //Song: The name of the song that you want to play, enter a song variable name defined above.
+    function play(target,song){
+      $(target).CirclePlayer(song);
+    }
+    
+  //Setting up all of the four different audio player
+    play("#cp-1",Clarksville_mp3);
+    play("#cp-2",DayDreamBeliever_mp3);
+    play("#cp-3",ImABeliever_mp3);
+    play("#cp-4",SteppingStone_mp3);
+</script>
+<!-- End of the Audio Player Script -->
 
 </body>
 

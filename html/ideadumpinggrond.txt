@@ -1,0 +1,14 @@
+BRAINSTORM:
+1. Color Scheme:
+    Are ya yellow?!: #feda6a
+
+    Silver Fox: #d4d4dc
+
+    Bootstrap Grey: #333A40
+
+    Dark Slate: #1d1e22
+
+
+
+
+TO BE IMPLEMENT:
