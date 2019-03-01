@@ -48,63 +48,108 @@ This will be the page whereby the public can play audio clips from the band
   <!-- Font Awesome CDN Stylesheet-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- Link to Font Awesome CDN Icons: https://fontawesome.com/icons?d=gallery-->
-
+  
+  <!-- Scrolling Plugin -->
+  <script type ="text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  
   <title>The Monkees</title>
 </head>
 
 <body>
   <div class="container nav-bar-container col-12">
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
-      <!-- Brand -->
-      <a class="navbar-brand" href="index.html">The Monkees</a>
-
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="audio-room.html">Audio Room</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact-us.html">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="meet-the-band.html">Meet The Band</a>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Sign Up &nbsp<i class="fas fa-user-plus" aria-hidden="true"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Login &nbsp<i class="fas fa-sign-in-alt" aria-hidden="true"></i></a></li>
-        </ul>
-
-      </div>
-    </nav>
+    <div class="nav-bar-wrapper">
+      <nav class="navbar bg-dark navbar-dark sticky-top">
+        <!-- Brand -->
+        <a class="navbar-brand rum-raisin-text" href="index.html">The Monkees</a>
+  
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="audio-room.html">Audio Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="meet-the-band.html">Meet The Band</a>
+            </li>
+          </ul>
+  
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Sign Up &nbsp<i class="fas fa-user-plus" aria-hidden="true"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Login &nbsp<i class="fas fa-sign-in-alt" aria-hidden="true"></i></a></li>
+          </ul>
+  
+        </div>
+      </nav>
+    </div>
   </div>
+ 
   <main>
     <div class="container main-content-wrapper">
-        <div class="audio-room-background-images" id="audio-room-background-image-1">
-          
+      <div class="background-image-wrapper"></div>
+      <div class="content-wrapper">
+        <div class="audio-room-background-images" id="audio-room-background-image-1"></div>
+        <div class="overlay"></div>
+        <div class="audio-room-center-overlay col-12">
+          <h1 class="rum-raisin-text our-greatest-hits">Our Greatest Hits</h1>
+          <button type="button" class="btn btn-dark btn-lg" onclick="(window).scrollTo(document.getElementById('audio-room-start'), 696,800);">Discover More</button>
         </div>
-        <div class="audio-room-background-images" id="audio-room-background-image-2">
-          
-        </div>
-        <div class="audio-room-background-images" id="audio-room-background-image-3">
-          
-        </div>
-        <div class="audio-room-background-images" id="audio-room-background-image-4">
-          
-        </div>
-        <div class="audio-room-background-images" id="audio-room-background-image-5">
-          
-        </div>
+      </div>  
+      
+      <div class="content-wrapper" id="audio-room-start">  
+        <div class="audio-room-background-images" id="audio-room-background-image-2"></div>
+        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
+        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+      </div>
+      
+      <div class="content-wrapper">  
+        <div class="audio-room-background-images" id="audio-room-background-image-3"></div>
+        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
+        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+      </div>
+       
+      <div class="content-wrapper">  
+        <div class="audio-room-background-images" id="audio-room-background-image-4"></div>
+        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
+        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+      </div>
+      
+      <div class="content-wrapper">  
+        <div class="audio-room-background-images" id="audio-room-background-image-5"></div>
+        <i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>
+        <i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>
+      </div>  
+        
     </div>
   </main>
+<!--
+I cant get this stupid thing to work so the options now are:
+  1. Try to get the sound manager api to work
+  2. Create a button which opens a modal box which has the audio
+  3. Use icons and javascript to open a hidden audio file
+-->
+
+<!-- 
+This script section is basically defining the function to scroll to the first audio track just 
+in case the direction function above does not call this can be used as a secondary function. 
+-->
+<script>
+    function back_up_scroll_to_first_audio_clip(){
+      (window).scrollTo(document.getElementById("audio-room-start"),696);
+      console.log("it works");
+    }
+</script>
+
 </body>
 
 </html>
+
+

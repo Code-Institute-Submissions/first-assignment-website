@@ -41,7 +41,6 @@
  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀         ▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀
 */
 .navbar-brand{
-    font-family: "Rum Raisin";
     font-size: x-large;
     border:1px solid #fff;
     padding:0 10px 0;
@@ -60,6 +59,16 @@ body,html {
     margin:0;
 }
 
+.rum-raisin-text {
+  font-family: "Rum Raisin";
+}
+
+.nav-bar-wrapper {
+ min-height: 56px;
+}
+/*.main-content-wrapper{*/
+/* background-image: url("../assets/Images/black-and-white-dark-marble-908283.jpg");*/
+/*}*/
 /*
  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄        ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄                      
 ▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░▌      ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌                     
@@ -124,23 +133,66 @@ body,html {
 */
 
 .audio-room-background-images{
-     /*Full Height*/
-    min-height: 100vh;
-    
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 25px;
+  /*Full Height*/
+ min-height: 100vh;
+ 
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ /*margin-bottom: 25px;*/
+ z-index: -1;
+ opacity: 0.8;
 }
 
 .main-content-wrapper {
     min-height: 100vh;
 }
+
+.audio-room-center-overlay {
+ position: absolute;
+ z-index: 1;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+}
+
+.overlay {
+ position: absolute;
+ z-index: 0;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+ background-color: black;
+ opacity: 0.8;
+ min-height: 100px;
+ 
+}
+/*.overlay{*/
+/* position:relative;*/
+/* height: 100%*/
+/*}*/
+
+/*#audio-room-content{*/
+/* position: absolute;*/
+/* top:50%;*/
+/* left:50%;*/
+/* transform: translate(-50%,-50%);*/
+/* text-align: center;*/
+/*}*/
+
+.our-greatest-hits{
+ font-size: 3rem;
+ color:ghostwhite;
+}
+
 #audio-room-background-image-1{
-    /*The Image Used:*/
-    background-image: url("../assets/Images/album-black-classic-167092.jpg");
+   /*The Image Used:*/
+   background-image: url("../assets/Images/album-black-classic-167092.jpg");
+   position:relative;
 }
 
 #audio-room-background-image-2{
@@ -195,4 +247,47 @@ body,html {
      ▐░▌      ▐░▌ ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌                  
      ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌                  
       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀                   
+*/
+
+
+/*
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌
+ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀▀▀ 
+     ▐░▌     ▐░▌          ▐░▌               ▐░▌          ▐░▌     ▐░▌▐░▌    ▐░▌▐░▌          
+     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄      ▐░▌          ▐░▌     ▐░▌ ▐░▌   ▐░▌▐░▌ ▄▄▄▄▄▄▄▄ 
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌          ▐░▌     ▐░▌  ▐░▌  ▐░▌▐░▌▐░░░░░░░░▌
+     ▐░▌     ▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀█░▌     ▐░▌          ▐░▌     ▐░▌   ▐░▌ ▐░▌▐░▌ ▀▀▀▀▀▀█░▌
+     ▐░▌     ▐░▌                    ▐░▌     ▐░▌          ▐░▌     ▐░▌    ▐░▌▐░▌▐░▌       ▐░▌
+     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄█░█▄▄▄▄ ▐░▌     ▐░▐░▌▐░█▄▄▄▄▄▄▄█░▌
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░░▌
+      ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                                           
+*/
+
+/*
+           ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄        ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄            
+          ▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░▌      ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌           
+          ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀█░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀            
+          ▐░▌          ▐░▌▐░▌    ▐░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░▌                     
+          ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌ ▐░▌   ▐░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄            
+          ▐░░░░░░░░░░░▌▐░▌  ▐░▌  ▐░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌           
+          ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌   ▐░▌ ▐░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀            
+          ▐░▌          ▐░▌    ▐░▌▐░▌▐░▌       ▐░▌     ▐░▌       ▐░▌▐░▌                     
+          ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌     ▐░▐░▌▐░█▄▄▄▄▄▄▄█░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░▌                     
+          ▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░▌      ▐░░░░░░░░░░░▌▐░▌                     
+           ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀        ▀▀▀▀▀▀▀▀▀▀▀  ▀                      
+                                                                                           
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌▐░░░░░░░░░░░▌
+ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀█░█▀▀▀▀  ▀▀▀▀█░█▀▀▀▀ ▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀▀▀ 
+     ▐░▌     ▐░▌          ▐░▌               ▐░▌          ▐░▌     ▐░▌▐░▌    ▐░▌▐░▌          
+     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄      ▐░▌          ▐░▌     ▐░▌ ▐░▌   ▐░▌▐░▌ ▄▄▄▄▄▄▄▄ 
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌          ▐░▌     ▐░▌  ▐░▌  ▐░▌▐░▌▐░░░░░░░░▌
+     ▐░▌     ▐░█▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀█░▌     ▐░▌          ▐░▌     ▐░▌   ▐░▌ ▐░▌▐░▌ ▀▀▀▀▀▀█░▌
+     ▐░▌     ▐░▌                    ▐░▌     ▐░▌          ▐░▌     ▐░▌    ▐░▌▐░▌▐░▌       ▐░▌
+     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌     ▐░▌      ▄▄▄▄█░█▄▄▄▄ ▐░▌     ▐░▐░▌▐░█▄▄▄▄▄▄▄█░▌
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░░▌
+      ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                                           
 */
