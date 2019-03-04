@@ -60,7 +60,7 @@
 					
 					
 					//CHANGE THIS PART IF YOU WANT TO CHANGE THE SIZE OF THE AUDIO PLAYER
-						loadingbordercontainer.css('clip','rect(0px, 300px, 300px, 150px)');
+						loadingbordercontainer.css('clip','rect(0px, 200px, 200px, 100px)');
 					
 					
 				}
@@ -74,7 +74,7 @@
 					
 					
 					// CHANGE THIS PART IF YOU WANT TO CHANGE THE SIZE OF THE AUDIO PLAYER
-						bordercontainer.css('clip','rect(0px, 300px, 300px, 150px)');
+						bordercontainer.css('clip','rect(0px, 200px, 200px, 100px)');
 					
 					
 				}

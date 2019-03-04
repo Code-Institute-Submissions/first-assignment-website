@@ -193,6 +193,9 @@ body,html {
  color:ghostwhite;
 }
 
+.song-name-wrapper{
+ margin-bottom:5vh;
+}
 #audio-room-background-image-1{
    /*The Image Used:*/
    background-image: url("../assets/Images/album-black-classic-167092.jpg");

@@ -2,9 +2,9 @@
 .cp-container {
 	position: relative;
 	display: table-cell;
-	border-radius: 150px;
-	width: 300px;
-	height: 300px;
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
 	overflow: hidden;
 	text-align: center;
 	vertical-align: middle;
@@ -13,11 +13,11 @@
 .cp-container i {
 	position: relative;
 	z-index: 200;
-	font-size: 5em;
+	font-size: 4em;
 	pointer-events: none;
 }
 .cp-container .fa-play {
-	left: 12px;
+	left: 8px;
 }
 
 
@@ -26,9 +26,9 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width:300px;
-	height:300px;
-	border-radius: 150px;
+	width:200px;
+	height:200px;
+	border-radius: 100px;
 	overflow: hidden;
 }
 .cp-loading-more-than-half {
@@ -36,8 +36,8 @@
 	top: 0px;
 	right: 0px;
 	background: ghostwhite;
-	width: 150px;
-	height: 300px;
+	width: 100px;
+	height: 200px;
 	display: none;
 	pointer-events: none;
 }
@@ -45,9 +45,9 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 300px;
-	height: 300px;
-	clip: rect(0px, 300px, 300px, 150px);
+	width: 200px;
+	height: 200px;
+	clip: rect(0px, 200px, 200px, 100px);
 	overflow: hidden;
 	pointer-events: none;
 }
@@ -66,8 +66,8 @@
 	top: 0px;
 	right: 0px;
 	background: white;
-	width: 150px;
-	height: 300px;
+	width: 100px;
+	height: 200px;
 	display: none;
 	pointer-events: none;
 }
@@ -75,9 +75,9 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 300px;
-	height: 300px;
-	clip: rect(0px, 300px, 300px, 150px);
+	width: 200px;
+	height: 200px;
+	clip: rect(0px, 200px, 200px, 100px);
 	overflow: hidden;
 	pointer-events: none;
 }
@@ -94,8 +94,8 @@
 .cp-fill {
 	position: absolute;
 	background: #aaa;
-	top: 30px; left: 30px;
-	border-radius: 120px;
-	width: 240px;
-	height: 240px;
+	top: 20px; left: 20px;
+	border-radius: 80px;
+	width: 160px;
+	height: 160px;
 }

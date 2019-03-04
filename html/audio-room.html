@@ -41,7 +41,13 @@ This will be the page whereby the public can play audio clips from the band
 
   <!-- Bootstrap JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- 
+  Commented out the slim version of jquery as it does not support the animate function.
+  If I cant get the duration variable to work properly,
+  I need to make my own function using animate function.
+  -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -50,7 +56,7 @@ This will be the page whereby the public can play audio clips from the band
   <!-- Link to Font Awesome CDN Icons: https://fontawesome.com/icons?d=gallery-->
   
   <!-- Scrolling Plugin -->
-  <script type ="text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <!--<script type ="text/javascript" src = "../assets/plugins/in-use/jquery-scrollTo/jquery.scrollTo.js"></script>-->
   
   <!-- Circle Audio Player Plugin Javascript File-->
   <script src="../assets/plugins/in-use/circle-audio-player/circle-audio-player-plugin-modified/circle-player.js"></script>
@@ -106,15 +112,15 @@ This will be the page whereby the public can play audio clips from the band
         <div class="overlay"></div>
         <div class="audio-room-center-overlay col-12">
           <h1 class="rum-raisin-text ghostwhite_3rem">Our Greatest Hits</h1>
-          <button type="button" class="btn btn-dark btn-lg" onclick="(window).scrollTo(document.getElementById('audio-room-start'), 696,800);">Discover More</button>
+          <button type="button" class="btn btn-dark btn-lg">Discover More</button>
         </div>
       </div>  
       
       <div class="audio-room-content-wrapper" id="audio-room-start">  
         <div class="audio-room-background-images" id="audio-room-background-image-2"></div>
         <div class="audio-room-center-overlay col-12">
-          <h1 class="rum-raisin-text ghostwhite_3rem">Clarksville</h1>
-          <span id="cp-1"></span>
+          <h1 class="rum-raisin-text ghostwhite_3rem song-name-wrapper">Clarksville</h1>
+          <span  id="cp-1"></span>
         </div>
         <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
         <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
@@ -123,8 +129,8 @@ This will be the page whereby the public can play audio clips from the band
       <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-3"></div>
         <div class="audio-room-center-overlay col-12">
-          <h1 class="rum-raisin-text ghostwhite_3rem">Day Dream Believer</h1>
-          <span id="cp-2"></span>
+          <h1 class="rum-raisin-text ghostwhite_3rem song-name-wrapper">Day Dream Believer</h1>
+          <span  id="cp-2"></span>
         </div>
         <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
         <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
@@ -133,8 +139,8 @@ This will be the page whereby the public can play audio clips from the band
       <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-4"></div>
         <div class="audio-room-center-overlay col-12">
-          <h1 class="rum-raisin-text ghostwhite_3rem">Im A Believer</h1>
-          <span id="cp-3"></span>
+          <h1 class="rum-raisin-text ghostwhite_3rem song-name-wrapper">Im A Believer</h1>
+          <span  id="cp-3"></span>
         </div>
         <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
         <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
@@ -143,8 +149,8 @@ This will be the page whereby the public can play audio clips from the band
       <div class="audio-room-content-wrapper">  
         <div class="audio-room-background-images" id="audio-room-background-image-5"></div>
         <div class="audio-room-center-overlay col-12">
-          <h1 class="rum-raisin-text ghostwhite_3rem">Stepping Stone</h1>
-          <span id="cp-4"></span>
+          <h1 class="rum-raisin-text ghostwhite_3rem song-name-wrapper">Stepping Stone</h1>
+          <span  id="cp-4"></span>
         </div>
         <!--<i class="fas fa-play-circle fa-4x audio-room-playback-icons"></i>-->
         <!--<i class="fas fa-pause-circle fa-4x audio-room-playback-icons"></i>-->
@@ -162,19 +168,22 @@ I cant get this stupid thing to work so the options now are:
 <!-- Start of Scroll Function Script -->
 <!-- 
 This script section is basically defining the function to scroll to the first audio track just 
-in case the direction function above does not call this can be used as a secondary function. 
+in case the direct function above does not call this can be used as a secondary function. 
 -->
+<!--
 <script>
     function back_up_scroll_to_first_audio_clip(){
-      (window).scrollTo(document.getElementById("audio-room-start"),696);
+      var target = document.getElementById("audio-room-start");
+      (window).scrollTo(target,100,0);
       console.log("it works");
     }
 </script>
+-->
 <!-- End of Scroll Function Script -->
 
 <!-- Start of the Audio Player Script -->
 <script>
-  // Setting up all the songs as variable
+  // Setting up all the songs as variables
     var Clarksville_mp3 = "../assets/Band-audio/Clarksville.mp3";
     var DayDreamBeliever_mp3 = "../assets/Band-audio/DaydreamBeliever.mp3";
     var ImABeliever_mp3 = "../assets/Band-audio/ImABeliever.mp3";
@@ -183,15 +192,17 @@ in case the direction function above does not call this can be used as a seconda
   //Defining all of the playback functions
   //Target: Which player controls the playback, enter a div ID.
   //Song: The name of the song that you want to play, enter a song variable name defined above.
+  //See Below for Examples
     function play(target,song){
       $(target).CirclePlayer(song);
     }
     
-  //Setting up all of the four different audio player
+  //Setting up all of the four different audio players
     play("#cp-1",Clarksville_mp3);
     play("#cp-2",DayDreamBeliever_mp3);
     play("#cp-3",ImABeliever_mp3);
     play("#cp-4",SteppingStone_mp3);
+    
 </script>
 <!-- End of the Audio Player Script -->
 

@@ -28,7 +28,7 @@ Just a few sentences about each of the members
                                                                                                       |__/                                                                                  |___/                             |___/                                                            
   
   -->
-  
+
   <!-- Meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +44,13 @@ Just a few sentences about each of the members
 
   <!-- Bootstrap JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- 
+  Commented out the slim version of jquery as it does not support the animate function.
+  If I cant get the duration variable to work properly,
+  I need to make my own function using animate function.
+  -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -61,15 +67,15 @@ Just a few sentences about each of the members
       <nav class="navbar bg-dark navbar-dark fixed-top">
         <!-- Brand -->
         <a class="navbar-brand rum-raisin-text" href="index.html">The Monkees</a>
-  
+
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-  
+
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-  
+
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="audio-room.html">Audio Room</a>
@@ -81,12 +87,12 @@ Just a few sentences about each of the members
               <a class="nav-link" href="meet-the-band.html">Meet The Band</a>
             </li>
           </ul>
-  
+
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="#">Sign Up &nbsp<i class="fas fa-user-plus" aria-hidden="true"></i></a></li>
             <li class="nav-item"><a class="nav-link" href="#">Login &nbsp<i class="fas fa-sign-in-alt" aria-hidden="true"></i></a></li>
           </ul>
-  
+
         </div>
       </nav>
     </div>
@@ -102,7 +108,7 @@ Just a few sentences about each of the members
           <li data-target="#meet-the-band-carousel" data-slide-to="1"></li>
           <li data-target="#meet-the-band-carousel" data-slide-to="2"></li>
         </ul>
-      
+
         <!-- The slideshow -->
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -118,7 +124,7 @@ Just a few sentences about each of the members
             <img src="#" alt="Micky Dolenz">
           </div>
         </div>
-      
+
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#meet-the-band-carousel" data-slide="prev">
           <span class="carousel-control-prev-icon"></span>
@@ -126,9 +132,9 @@ Just a few sentences about each of the members
         <a class="carousel-control-next" href="#meet-the-band-carousel" data-slide="next">
           <span class="carousel-control-next-icon"></span>
         </a>
-    </div>
-   
-    
+      </div>
+
+
     </div>
   </main>
 </body>
