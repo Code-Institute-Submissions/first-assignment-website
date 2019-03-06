@@ -8,7 +8,10 @@ BRAINSTORM:
 
     Dark Slate: #1d1e22
 
+2. I think that the contact form should be modelled after the one on glint, 
+whereby the border of the box changes color after the form is filled, 
+form validation can be displayed below that box.
 
-
+3. I think that the photos in the gallery section should be in black and white.
 
 TO BE IMPLEMENT:
