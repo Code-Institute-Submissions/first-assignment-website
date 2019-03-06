@@ -14,4 +14,7 @@ form validation can be displayed below that box.
 
 3. I think that the photos in the gallery section should be in black and white.
 
+Scrollspy
+Audio Room scrolling with active tab
+
 TO BE IMPLEMENT:
