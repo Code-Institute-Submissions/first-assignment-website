@@ -45,6 +45,11 @@ body,html,main,.main-content-wrapper {
 .roboto-text {
  font-family: "Roboto";
 }
+
+.playfairdisplay-bold-text {
+ font-family: "Playfair Display";
+ font-weight:900;
+}
 .nav-bar-wrapper {
  min-height: 56px;
 }
@@ -61,6 +66,69 @@ body,html,main,.main-content-wrapper {
 .sticky-top{
  position: fixed;
  width:100%;
+}
+
+.btn-tickets,.btn-buy-now {
+ background-color:#feda6a;
+ color:black;
+}
+
+.bg-yellow {
+ background-color:#feda6a;
+}
+/*NAVBAR MEDIA QUERY FOR TABLET*/
+@media (min-width:767px) {
+ 
+ /*.navbar,.nav-bar-wrapper,header {*/
+ /* min-height: 8vh;*/
+ /*}*/
+ 
+}
+/*NAVBAR MEDIA QUERY FOR LAPTOP*/
+/*NAVBAR MEDIA QUERY FOR DESKTOP*/
+@media (min-height:1081px){
+ .navbar {
+  height:80px;
+ }
+ .nav-bar-wrapper{
+  min-height: 80px;
+ }
+ .navbar-brand{
+  font-size:2.5rem;
+ }
+ 
+ .navbar-toggler {
+  font-size:1.75rem;
+ }
+ .footer-text{
+  font-size:1.5rem;
+ }
+ .footer-icon{
+ font-size:1.5rem;
+ }
+}
+
+@media (min-height:2000px){
+ .navbar {
+  height:120px;
+ }
+ .nav-bar-wrapper{
+  min-height: 120px;
+ }
+ .navbar-brand{
+  font-size:3.5rem;
+ }
+ 
+ .navbar-toggler {
+  font-size:2.5rem;
+ }
+ 
+ .footer-text{
+  font-size:2.5rem;
+ }
+ .footer-icon{
+ font-size:2.5rem;
+ }
 }
 /* END OF GLOBAL CHANGES*/
 
@@ -148,7 +216,7 @@ body,html,main,.main-content-wrapper {
 /* LANDING PAGE CSS */
 .index-page-image-overlay {
  background-image:url("../assets/Band-images/monkees.jpg");
- min-height: 95vh;
+ min-height: 93vh;
  background-position: center bottom;
  background-size: cover;
 }
@@ -202,6 +270,12 @@ body,html,main,.main-content-wrapper {
 .yellow-button:hover{
  color:white;
 }
+/*LANDING PAGE MEDIA QUERY FOR IPHONE 5/SE */
+@media (max-width:330px){
+ .yellow-button{
+  font-size:1.75rem;
+ }
+}
 
 /*LANDING PAGE MEDIA QUERY FOR TABLET*/
 @media (min-width:767px) {
@@ -211,7 +285,7 @@ body,html,main,.main-content-wrapper {
  }
  
  .main-page-center-overlay{
-  top:45%;
+  /*top:45%;*/
  }
  
 }
@@ -303,4 +377,25 @@ body,html,main,.main-content-wrapper {
  width: 100%;
  position:relative;
 }
-/* END OF CONTACT US PAGE CSS*/
+/* END OF CONTACT US PAGE CSS */
+
+/* TOUR DATES PAGE CSS */
+/* END OF TOUR DATES PAGE CSS */
+
+/*SHOP PAGE CSS*/
+.shop-item-wrapper {
+ text-align:center;
+}
+
+.shop-item-categories{
+ font-family:"Rum Raisin";
+ font-size:2rem;
+}
+
+.price-text {
+ font-size:1.75rem;
+}
+.card-deck {
+ margin:0px;
+}
+/*END OF SHOP PAGE CSS*/
