@@ -43,18 +43,6 @@ be informed about contact form errors while they are filling out the form.
   <!-- Personal Stylesheet -->
   <link rel="stylesheet" href="../css/style.css" type="text/css">
 
-  <!-- Bootstrap JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- 
-  Commented out the slim version of jquery as it does not support the animate function.
-  If I cant get the duration variable to work properly,
-  I need to make my own function using animate function.
-  -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   <!-- Font Awesome CDN Stylesheet-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- Link to Font Awesome CDN Icons: https://fontawesome.com/icons?d=gallery-->
@@ -102,88 +90,129 @@ be informed about contact form errors while they are filling out the form.
           </nav>
         </div>
       </header>
-      <div class="main-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="main-content-wrapper ">
 
-        <div class="shop-item-wrapper">
-          <div class="shop-item-categories">ALBUMS</div>
-          <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/album.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text">More Greatest Hits Of The Monkees</h4>
-                <p class="card-text roboto-text">Great Album</p>
-                <p class="card-text roboto-text price-text">$29.99</p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
+            <div class="shop-item-wrapper">
+              <div class="shop-item-categories">ALBUMS</div>
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/album.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">More Greatest Hits Of The Monkees</h4>
+                    <p class="card-text roboto-text">Great Album</p>
+                    <p class="card-text roboto-text price-text">$29.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-danger disabled btn-lg btn-shop-page">SOLD OUT</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/album2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text strong">The Very Best Of The Monkees</h4>
+                    <p class="card-text roboto-text">Great Album</p>
+                    <p class="card-text roboto-text price-text">$19.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/cover.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">The Monkees Greatest Hits</h4>
+                    <p class="card-text roboto-text">Great Album</p>
+                    <p class="card-text roboto-text price-text"><s>$29.99</s><strong><mark>$19.99</mark></strong></p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/album2.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text strong">The Very Best Of The Monkees</h4>
-                <p class="card-text roboto-text">Great Album</p>
-                <p class="card-text roboto-text price-text">$19.99</p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
+
+            <div class="shop-item-wrapper">
+              <div class="shop-item-categories">POSTERS</div>
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/cover1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">Poster #1</h4>
+                    <p class="card-text roboto-text">Great Poster</p>
+                    <p class="card-text roboto-text price-text">$19.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/cover2.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">Poster #2</h4>
+                    <p class="card-text roboto-text">Great Poster</p>
+                    <p class="card-text roboto-text price-text">$19.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Band-images/cover3.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">Poster #3</h4>
+                    <p class="card-text roboto-text">Great Poster</p>
+                    <p class="card-text roboto-text price-text"><s>$19.99</s><strong><mark>$9.99</mark></strong></p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/cover.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text">The Monkees Greatest Hits</h4>
-                <p class="card-text roboto-text">Great Album</p>
-                <p class="card-text roboto-text price-text"><s>$29.99</s><strong><mark>$19.99</mark></strong></p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
+
+            <div class="shop-item-wrapper">
+              <div class="shop-item-categories">T-SHIRTS</div>
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Images/t-shirt-1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">T-Shirt #1</h4>
+                    <p class="card-text roboto-text">Great T-Shirt</p>
+                    <p class="card-text roboto-text price-text">$9.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Images/t-shirt-2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">T-Shirt #2</h4>
+                    <p class="card-text roboto-text">Great T-Shirt</p>
+                    <p class="card-text roboto-text price-text">$9.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-buy-now btn-lg btn-shop-page">BUY NOW</a></small>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="../assets/Images/t-shirt-3.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title playfairdisplay-bold-text">T-Shirt #3</h4>
+                    <p class="card-text roboto-text">Great T-Shirt</p>
+                    <p class="card-text roboto-text price-text">$9.99</p>
+                  </div>
+                  <div class="card-footer">
+                    <small><a href="#" class="btn btn-danger disabled btn-lg btn-shop-page">SOLD OUT</a></small>
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
-
-        <div class="shop-item-wrapper">
-          <div class="shop-item-categories">Posters</div>
-          <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/cover1.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text">Poster #1</h4>
-                <p class="card-text roboto-text">Great Poster</p>
-                <p class="card-text roboto-text price-text">$19.99</p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/cover2.png" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text">Poster #2</h4>
-                <p class="card-text roboto-text">Great Poster</p>
-                <p class="card-text roboto-text price-text">$19.99</p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="../assets/Band-images/cover3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title playfairdisplay-bold-text">Poster #3</h4>
-                <p class="card-text roboto-text">Great Poster</p>
-                <p class="card-text roboto-text price-text"><s>$19.99</s><strong><mark>$9.99</mark></strong></p>
-              </div>
-              <div class="card-footer">
-                <small><a href="#" class="btn btn-buy-now btn-lg">BUY NOW</a></small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
       </div>
       <footer>
         <nav class="navbar bg-dark navbar-dark">
@@ -201,6 +230,18 @@ be informed about contact form errors while they are filling out the form.
       </footer>
     </main>
   </div>
+  <!-- Bootstrap JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- 
+  Commented out the slim version of jquery as it does not support the animate function.
+  If I cant get the duration variable to work properly,
+  I need to make my own function using animate function.
+  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
