@@ -1,0 +1,193 @@
+<!--
+INTERNAL LOGIC:
+This will be the page whereby the public can play audio clips from the band
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- GOOGLE FONTS CSS LINK-->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:400,500,700,900|Rum+Raisin" rel="stylesheet">
+
+  <!-- Personal Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+  <!-- Font Awesome CDN Stylesheet-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Link to Font Awesome CDN Icons: https://fontawesome.com/icons?d=gallery-->
+
+  <!-- Scrolling Plugin -->
+  <!--<script type ="text/javascript" src = "../assets/plugins/in-use/jquery-scrollTo/jquery.scrollTo.js"></script>-->
+
+  <!-- Circle Audio Player Plugin Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/in-use/circle-audio-player/circle-audio-player-plugin-modified/circle-player.css" />
+
+  <title>The Monkees</title>
+</head>
+
+<body>
+  <div class="container nav-bar-container">
+    <main>
+      <header>
+        <div class="nav-bar-wrapper">
+          <nav class="navbar bg-dark navbar-dark sticky-top navbar-expand-lg">
+            <!-- Brand -->
+            <a class="navbar-brand rum-raisin-text" href="index.html">The Monkees</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse mb-2" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="audio-room.html">Audio Room</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="meet-the-band.html">Meet The Band</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tour-dates.html">Tour Dates</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="shop-page.html">Shop</a>
+                    </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="audio-room-main-content-wrapper">
+        <div class="background-image-wrapper"></div>
+        <div class="audio-room-content-wrapper">
+          <div class="audio-room-background-images" id="audio-room-background-image-1"></div>
+          <div class="overlay"></div>
+          <div class="audio-room-center-overlay ">
+            <h1 class="rum-raisin-text ghostwhite_3rem">Our Greatest Hits</h1>
+            <a href="#audio-room-background-image-2" class="btn btn-dark btn-lg">Discover More</a>
+          </div>
+        </div>
+
+        <div class="audio-room-content-wrapper" id="audio-room-start">
+          <div class="audio-room-background-images" id="audio-room-background-image-2"></div>
+          <div class="audio-room-center-overlay ">
+            <h1 class="rum-raisin-text font-size-3rem song-name-wrapper">Clarksville</h1>
+            <span id="cp-1"></span>
+          </div>
+        </div>
+
+        <div class="audio-room-content-wrapper">
+          <div class="audio-room-background-images" id="audio-room-background-image-3"></div>
+          <div class="audio-room-center-overlay ">
+            <h1 class="rum-raisin-text font-size-3rem song-name-wrapper">Day Dream Believer</h1>
+            <span id="cp-2"></span>
+          </div>
+        </div>
+
+        <div class="audio-room-content-wrapper">
+          <div class="audio-room-background-images" id="audio-room-background-image-4"></div>
+          <div class="audio-room-center-overlay ">
+            <h1 class="rum-raisin-text font-size-3rem song-name-wrapper">Im A Believer</h1>
+            <span id="cp-3"></span>
+          </div>
+        </div>
+
+        <div class="audio-room-content-wrapper">
+          <div class="audio-room-background-images" id="audio-room-background-image-5"></div>
+          <div class="audio-room-center-overlay ">
+            <h1 class="rum-raisin-text font-size-3rem song-name-wrapper">Stepping Stone</h1>
+            <span id="cp-4"></span>
+          </div>
+        </div>
+
+      </div>
+      <footer>
+        <nav class="navbar bg-dark navbar-dark">
+          <div class="container">
+            <div class="row navbar-text footer-text">Contact: themonkees@mailinator.com</div>
+            <div class="row">
+              <div class="col navbar-text footer-icon"><i class="fab fa-facebook-square"></i></div>
+              <div class="col navbar-text footer-icon"><i class="fab fa-twitter"></i></div>
+              <div class="col navbar-text footer-icon"><i class="fab fa-instagram"></i></div>
+              <div class="col navbar-text footer-icon"><i class="fab fa-whatsapp-square"></i></div>
+              <div class="col navbar-text footer-icon"><i class="far fa-envelope"></i></div>
+            </div>
+          </div>
+        </nav>
+      </footer>
+    </main>
+  </div>
+  <!-- Bootstrap JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- 
+  Commented out the slim version of jquery as it does not support the animate function.
+  If I cant get the duration variable to work properly,
+  I need to make my own function using animate function.
+  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Circle Audio Player Plugin Javascript File-->
+  <script src="../assets/plugins/in-use/circle-audio-player/circle-audio-player-plugin-modified/circle-player.js"></script>
+
+  <!--
+I cant get this stupid thing to work so the options now are:
+  1. Try to get the sound manager api to work
+  2. Create a button which opens a modal box which has the audio
+  3. Use icons and javascript to open a hidden audio file
+-->
+
+  <!-- Start of Scroll Function Script -->
+  <!-- 
+This script section is basically defining the function to scroll to the first audio track just 
+in case the direct function above does not call this can be used as a secondary function. 
+-->
+  <!--
+<script>
+    function back_up_scroll_to_first_audio_clip(){
+      var target = document.getElementById("audio-room-start");
+      (window).scrollTo(target,100,0);
+      console.log("it works");
+    }
+</script>
+-->
+  <!-- End of Scroll Function Script -->
+
+  <!-- Start of the Audio Player Script -->
+  <script>
+    // Setting up all the songs as variables
+    var Clarksville_mp3 = "../assets/Band-audio/Clarksville.mp3";
+    var DayDreamBeliever_mp3 = "../assets/Band-audio/DaydreamBeliever.mp3";
+    var ImABeliever_mp3 = "../assets/Band-audio/ImABeliever.mp3";
+    var SteppingStone_mp3 = "../assets/Band-audio/SteppingStone.mp3";
+
+    //Defining all of the playback functions
+    //Target: Which player controls the playback, enter a div ID.
+    //Song: The name of the song that you want to play, enter a song variable name defined above.
+    //See Below for Examples
+    function play(target, song) {
+      $(target).CirclePlayer(song);
+    }
+
+    //Setting up all of the four different audio players
+    play("#cp-1", Clarksville_mp3);
+    play("#cp-2", DayDreamBeliever_mp3);
+    play("#cp-3", ImABeliever_mp3);
+    play("#cp-4", SteppingStone_mp3);
+  </script>
+  <!-- End of the Audio Player Script -->
+
+</body>
+
+</html>

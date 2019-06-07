@@ -1,0 +1,459 @@
+/*
+   _____   _____    ______              _______   ______   _____      ____   __     __                    _    ____    _    _   _   _     ____    ______   _   _   ______   _____    _____    _____   _______                                                                                
+  / ____| |  __ \  |  ____|     /\     |__   __| |  ____| |  __ \    |  _ \  \ \   / /                   | |  / __ \  | |  | | | \ | |   |  _ \  |  ____| | \ | | |  ____| |  __ \  |_   _|  / ____| |__   __|                                                                               
+ | |      | |__) | | |__       /  \       | |    | |__    | |  | |   | |_) |  \ \_/ /     ______         | | | |  | | | |__| | |  \| |   | |_) | | |__    |  \| | | |__    | |  | |   | |   | |         | |                                                                                  
+ | |      |  _  /  |  __|     / /\ \      | |    |  __|   | |  | |   |  _ <    \   /     |______|    _   | | | |  | | |  __  | | . ` |   |  _ <  |  __|   | . ` | |  __|   | |  | |   | |   | |         | |                                                                                  
+ | |____  | | \ \  | |____   / ____ \     | |    | |____  | |__| |   | |_) |    | |                 | |__| | | |__| | | |  | | | |\  |   | |_) | | |____  | |\  | | |____  | |__| |  _| |_  | |____     | |                                                                                  
+  \_____| |_|  \_\ |______| /_/    \_\    |_|    |______| |_____/    |____/     |_|                  \____/   \____/  |_|  |_| |_| \_|   |____/  |______| |_| \_| |______| |_____/  |_____|  \_____|    |_|                                                                                  
+                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                             
+  ______   __  __              _____   _                                                               _           _               _                                 _   _          _                                                                   _   _                                
+ |  ____| |  \/  |     /\     |_   _| | |                                                             (_)         | |             | |                               | | (_)        | |                              ____                               (_) | |                               
+ | |__    | \  / |    /  \      | |   | |                                                 ______       _    ___   | |__    _ __   | |__     ___   _ __     ___    __| |  _    ___  | |_   _   _    __ _   _ __     / __ \    __ _   _ __ ___     __ _   _  | |       ___    ___    _ __ ___  
+ |  __|   | |\/| |   / /\ \     | |   | |                                                |______|     | |  / _ \  | '_ \  | '_ \  | '_ \   / _ \ | '_ \   / _ \  / _` | | |  / __| | __| | | | |  / _` | | '_ \   / / _` |  / _` | | '_ ` _ \   / _` | | | | |      / __|  / _ \  | '_ ` _ \ 
+ | |____  | |  | |  / ____ \   _| |_  | |____                                                         | | | (_) | | | | | | | | | | |_) | |  __/ | | | | |  __/ | (_| | | | | (__  | |_  | |_| | | (_| | | | | | | | (_| | | (_| | | | | | | | | (_| | | | | |  _  | (__  | (_) | | | | | | |
+ |______| |_|  |_| /_/    \_\ |_____| |______|                                                        | |  \___/  |_| |_| |_| |_| |_.__/   \___| |_| |_|  \___|  \__,_| |_|  \___|  \__|  \__, |  \__,_| |_| |_|  \ \__,_|  \__, | |_| |_| |_|  \__,_| |_| |_| (_)  \___|  \___/  |_| |_| |_|
+                                                                                                     _/ |                                                                                  __/ |                   \____/    __/ |                                                           
+                                                                                                    |__/                                                                                  |___/                             |___/                                                            
+*/
+
+/*Fonts*/
+
+@font-face {
+ font-family: "Socket Regular";
+ src: url(../assets/Fonts/Socket/SOCKET.ttf) format("truetype");
+}
+
+/*End of Fonts*/
+
+/* GLOBAL CHANGES */
+
+.navbar-brand {
+ font-size: x-large;
+ border: 1px solid #fff;
+ padding: 0 10px 0;
+}
+
+body,
+html,
+main,
+.main-content-wrapper {
+ height: 100%;
+ min-width: 100vw;
+}
+
+#collapsibleNavbar {
+ padding-top: 10px;
+}
+
+.nav-bar-container {
+ padding: 0;
+ margin: 0;
+
+}
+
+.rum-raisin-text {
+ font-family: "Rum Raisin";
+}
+
+.socket-regular-text {
+ font-family: "Socket Regular";
+}
+.roboto-text {
+ font-family: "Roboto";
+}
+
+.playfairdisplay-bold-text {
+ font-family: "Playfair Display";
+ font-weight: 900;
+}
+
+.nav-bar-wrapper {
+ min-height: 56px;
+}
+
+.dark-background {
+ background-color: black;
+ /*min-height: 94vh;*/
+}
+
+.main-content-wrapper {
+ position: relative;
+}
+
+.sticky-top {
+ position: fixed;
+ width: 100%;
+}
+
+.btn-tickets,
+.btn-buy-now {
+ background-color: #feda6a;
+ color: black;
+}
+
+.bg-yellow {
+ background-color: #feda6a;
+}
+
+/*NAVBAR MEDIA QUERY FOR TABLET*/
+
+@media (min-width:767px) {
+
+ /*.navbar,.nav-bar-wrapper,header {*/
+ /* min-height: 8vh;*/
+ /*}*/
+}
+
+/*NAVBAR MEDIA QUERY FOR LAPTOP*/
+
+/*NAVBAR MEDIA QUERY FOR DESKTOP*/
+
+@media (min-height:1081px) {
+ .navbar {
+  min-height: 80px;
+ }
+ .nav-bar-wrapper {
+  min-height: 80px;
+ }
+ .navbar-brand {
+  font-size: 2.5rem;
+ }
+
+ .navbar-toggler {
+  font-size: 1.75rem;
+ }
+ .footer-text {
+  font-size: 1.5rem;
+ }
+ .footer-icon {
+  font-size: 1.5rem;
+ }
+}
+
+@media (min-height:2000px) {
+ .navbar {
+  min-height: 120px;
+ }
+ .nav-bar-wrapper {
+  min-height: 120px;
+ }
+ .navbar-brand {
+  font-size: 3.5rem;
+ }
+
+ .navbar-toggler {
+  font-size: 2.5rem;
+ }
+
+ .footer-text {
+  font-size: 2.5rem;
+ }
+ .footer-icon {
+  font-size: 2.5rem;
+ }
+}
+
+/* END OF GLOBAL CHANGES*/
+
+/* AUDIO ROOM CSS*/
+
+.audio-room-background-images {
+ /*Full Height*/
+ min-height: 100vh;
+
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ /*margin-bottom: 25px;*/
+ z-index: -1;
+ opacity: 0.8;
+}
+
+.audio-room-main-content-wrapper {
+ min-height: 100vh;
+}
+
+.audio-room-content-wrapper {
+ position: relative;
+}
+
+.audio-room-center-overlay {
+ position: absolute;
+ z-index: 1;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+}
+
+.overlay {
+ position: absolute;
+ z-index: 0;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ background-color: black;
+ opacity: 0.8;
+ min-height: 100px;
+
+}
+
+.ghostwhite_3rem {
+ font-size: 3rem;
+ color: ghostwhite;
+}
+
+.font-size-3-rem {
+ font-size: 3rem;
+}
+
+.song-name-wrapper {
+ margin-bottom: 5vh;
+}
+
+#audio-room-background-image-1 {
+ /*The Image Used:*/
+ background-image: url("../assets/Images/album-black-classic-167092.jpg");
+}
+
+#audio-room-background-image-2 {
+ background-image: url("../assets/Images/aged-audio-cassette-1228497.jpg");
+}
+
+#audio-room-background-image-3 {
+ background-image: url("../assets/Images/audio-close-up-electronics-1389429.jpg");
+}
+
+#audio-room-background-image-4 {
+ background-image: url("../assets/Images/cassette-cassette-tape-music-92083.jpg");
+}
+
+#audio-room-background-image-5 {
+ background-image: url("../assets/Images/black-and-white-brand-data-145707.jpg");
+}
+
+/* END OF AUDIO ROOM CSS */
+
+/* LANDING PAGE CSS */
+
+.index-page-image-overlay {
+ background-image: url("../assets/Band-images/monkees.jpg");
+ min-height: 93vh;
+ background-position: center bottom;
+ background-size: cover;
+}
+
+.main-page-center-overlay {
+ position: absolute;
+ z-index: 1;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+}
+
+.tours-on-overlay {
+ opacity: 0.35;
+ background-color: #1d1e22;
+ min-height: 35vh;
+ width: 100%;
+ position: relative;
+}
+
+.tours-on {
+ font-size: 5rem;
+ position: absolute;
+ z-index: 2;
+ top: 30%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+ color: ghostwhite;
+}
+
+.book-now-button {
+ position: absolute;
+ z-index: 2;
+ top: 70%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+
+}
+
+.yellow-button {
+ color: #feda6a;
+ font-size: 2rem;
+}
+
+.yellow-button:hover {
+ color: white;
+}
+
+/*LANDING PAGE MEDIA QUERY FOR IPHONE 5/SE */
+
+@media (max-width:330px) {
+ .yellow-button {
+  font-size: 1.75rem;
+ }
+}
+
+/*LANDING PAGE MEDIA QUERY FOR TABLET*/
+
+@media (min-width:767px) {
+
+ .tours-on-overlay {
+  min-height: 25vh;
+ }
+
+ .main-page-center-overlay {
+  /*top:45%;*/
+ }
+
+}
+
+/*LANDING PAGE MEDIA QUERY FOR LAPTOP*/
+
+@media (max-height:768px) {
+
+ .tours-on-overlay {
+  min-height: 35vh;
+ }
+
+ .main-page-center-overlay {
+  top: 35%;
+ }
+}
+
+/*LANDING PAGE MEDIA QUERY FOR DESKTOP*/
+
+@media (min-width:4096px) {
+
+ .main-page-center-overlay {
+  top: 40%;
+ }
+
+ .tours-on {
+  font-size: 11rem;
+ }
+
+ .yellow-button {
+  font-size: 6rem;
+ }
+}
+
+/* END OF LANDING PAGE CSS*/
+
+/* MEET THE BAND PAGE CSS */
+
+.meet-the-band-image-overlay {
+ background-image: url('../assets/Band-images/monkees.jpg');
+ min-height: 95vh;
+ background-position: center;
+ background-size: cover;
+}
+
+/* END OF MEET THE BAND PAGE CSS */
+
+/* CONTACT US PAGE CSS*/
+
+.contact-us-text {
+ font-size: 3rem;
+}
+
+.contact-us-page-image-overlay {
+ background-image: url('../assets/Images/audio-blur-chrome-675960.jpg');
+ min-height: 95vh;
+ background-position: center bottom;
+ background-size: cover;
+}
+
+.contact-us-page-center-overlay {
+ position: absolute;
+ z-index: 1;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+}
+
+.contact-the-band-text {
+ font-size: 2rem;
+ position: absolute;
+ z-index: 2;
+ top: 10%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+}
+
+.contact-the-band-form-wrapper {
+ position: absolute;
+ z-index: 2;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 100%;
+}
+
+.contact-us-form-overlay {
+ opacity: 0.25;
+ background-color: ghostwhite;
+ min-height: 75vh;
+ width: 100%;
+ position: relative;
+}
+
+/* END OF CONTACT US PAGE CSS */
+
+/* TOUR DATES PAGE CSS */
+
+/* END OF TOUR DATES PAGE CSS */
+
+/*SHOP PAGE CSS*/
+
+.shop-item-wrapper {
+ text-align: center;
+}
+
+.shop-item-categories {
+ font-family: "Socket Regular";
+ font-size: 2rem;
+}
+
+.price-text {
+ font-size: 1.75rem;
+}
+
+.card-deck {
+ margin: 0px;
+}
+
+@media(min-height:1000px){
+ .shop-item-categories{
+  font-size:3rem;
+ }
+ .card-body h4 {
+  font-size:2.5rem;
+ }
+ .card-body p {
+  font-size:1.5rem;
+ }
+ .price-text {
+  font-size:2rem;
+ }
+ .btn-shop-page {
+  font-size:1.75rem;
+ }
+}
+/*END OF SHOP PAGE CSS*/
